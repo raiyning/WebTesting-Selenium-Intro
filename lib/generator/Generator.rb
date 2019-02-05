@@ -1,6 +1,7 @@
 require_relative './service/Postcodes'
 require_relative './service/CityID'
 require_relative './service/RandomMovies'
+require_relative './service/RandomName'
 class Generator
 
   def random_movie
@@ -15,8 +16,9 @@ class Generator
     CityID.new
   end
 
+  def random_name
+    RandomName.new
+  end
+
 end
 
-test = Generator.new
-some = test.random_movie
-p some.generate_movie_name
