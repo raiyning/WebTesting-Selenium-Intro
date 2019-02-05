@@ -17,3 +17,6 @@ class Generator
 
 end
 
+test = Generator.new
+some = test.random_movie
+p some.generate_movie_name
