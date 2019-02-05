@@ -18,6 +18,11 @@ describe 'testing the demo qatesting auto form' do
       @driver.input_firstname_field(@name)
       expect(@driver.input_firstname_field_value).to eq @name
     end
+
+    it 'should accept a first name ' do
+      @driver.input_firstname_field(@name)
+      expect(@driver.input_firstname_field_value).to eq @name
+    end
     
 
   end
