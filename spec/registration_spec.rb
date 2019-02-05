@@ -6,7 +6,10 @@ describe 'testing the demo qatesting auto form' do
     @driver = QatoolsForm.new
     @driver.visit_practice_form
     @url = 'https://www.toolsqa.com/automation-practice-form'
-    @name = Faker::HarryPotter.character
+    @name = Generator.new.random_form.name
+    @lastname = Generator.new.random_form.last_name
+
+    
   end
   context 'testing the positive paths for the form' do
 
@@ -20,7 +23,7 @@ describe 'testing the demo qatesting auto form' do
     end
 
     it 'should accept a last name ' do
-      @driver.input_lastname_field(@name)
+      @driver.input_lastname_field(@lastname)
       expect(@driver.input_firstname_field_value).to eq @name
     end
     
