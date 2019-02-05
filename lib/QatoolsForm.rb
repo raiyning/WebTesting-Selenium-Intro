@@ -39,6 +39,10 @@ class QatoolsForm
     @chrome_driver.find_elements(:name, YEARS_EXPERIENCE_FIELD_NAME)[num].click
   end
 
+  def input_years_of_experience_field_value
+    @chrome_driver.find_element(:name, YEARS_OF_EXPERIENCE_FIELD_NAME)['value']
+  end
+
   def input_sex_field(number)
     @chrome_driver.find_elements(:name, SEX_FIELD_NAME)[number].click
   end
