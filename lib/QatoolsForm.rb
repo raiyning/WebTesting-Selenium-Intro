@@ -51,6 +51,10 @@ class QatoolsForm
     @chrome_driver.find_elements(:name, PROFESSION_FIELD_NAME)[num1].click
     @chrome_driver.find_elements(:name, PROFESSION_FIELD_NAME)[num2].click
   end
+  
+  def input_profession_field_value
+    @chrome_driver.find_element(:name, PROFESSION_FIELD_NAME)['value']
+  end
 
   def input_automation_tool_field(num)
     @chrome_driver.find_elements(:name, AUTOMATION_TOOL_FIELD_NAME)[num].click
