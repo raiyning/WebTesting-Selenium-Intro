@@ -26,6 +26,11 @@ describe 'testing the demo qatesting auto form' do
       @driver.input_lastname_field(@lastname)
       expect(@driver.input_firstname_field_value).to eq @name
     end
+
+    it 'should be able to accept experience field' do 
+      @driver.input_years_of_experience_field(7)
+      expect(@driver.input_firstname_field_value).to eq 7
+    end
     
 
   end
